@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    display: flex;  
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+h1{
+  text-align: center;
+  
+}
+main{
+    font-family: 'Passion One';
+    margin-top: 20px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px; /
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    border: 2px solid #ccc; 
+    padding: 15px; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.card img {
+    max-width: 100%; 
+    height: auto; 
+}
+footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+header {
+    background-color: #013672;
+}
+
+header img,
+footer img {
+    width: 200px;
+}
