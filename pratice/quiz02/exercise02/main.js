@@ -17,24 +17,31 @@ function setup() {
 
 // function definition goes here:
 function drawMonster(x, y, size, color, isSurprised) {
-  /**
-   * Make face rectangle (x, y, width, height)
-   * Two more smaller rectangles (math to x, y, width, height to petion the correctly
-   */
+  rectMode(CENTER); // Centered rectangles
   fill(color);
-  rect(x, y, size, size);
+  rect(x, y, size, size, 20); // Face with rounded corners
+
+  // Eye calculations
+  let eyeSize = size / 5;
+  let pupilSize = size / 10;
+  let eyeOffsetX = size / 4;
+  let eyeOffsetY = size / 6;
+
+  // Draw eyes
   fill("white");
-  const eyeXleft = x - size / 3;
-  const eyeY = x - size / 3;
-  const eyeBallWidth = size / 5;
-  const pupilWidth = size / 10;
+  rect(x - eyeOffsetX, y - eyeOffsetY, eyeSize, eyeSize);
+  rect(x + eyeOffsetX, y - eyeOffsetY, eyeSize, eyeSize);
 
-  // left eye
-  rect(eyeXleft, eyeY, eyeBallWidth, eyeBallWidth);
-  // right eye
+  // Draw pupils
+  fill("black");
+  rect(x - eyeOffsetX, y - eyeOffsetY, pupilSize, pupilSize);
+  rect(x + eyeOffsetX, y - eyeOffsetY, pupilSize, pupilSize);
 
-  /** Set color to black
-   * make two puplis
-   * Make the mouth (needs an if else) -- frog mout or suprise mouth
-   */
+  // Draw the mouth
+  fill("black");
+  if (isSurprised) {
+    rect(x, y + size / 6, size / 6, size / 6); // Square mouth for surprised face
+  } else {
+    rect(x, y + size / 6, size / 3, size / 10); // Regular rectangular mouth
+  }
 }
