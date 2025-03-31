@@ -21,10 +21,6 @@ async function getWikipediaArticle(searchTerm) {
 
 function dataToHTML(wikiArticle) {
   // your code here...
-  if (!wikiArticle || !wikiArticle.title || !wikiArticle.extract_html) {
-    return `<p>Error: Invalid Wikipedia article data.</p>`;
-  }
-
   const thumbnail = wikiArticle.thumbnail
     ? wikiArticle.thumbnail.source
     : "https://picsum.photos/150";
