@@ -1,14 +1,17 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { Image, Carousel } from "antd";
+import { Image, Carousel, Drawer, Card } from "antd";
 import MyCarousel from "./MyCarousel";
-
+import MyDrawer from "./MyDrawer";
+import MyCard from "./MyCard";
 // custom components:
 export default function App() {
   return (
     <>
       <NavBar />
       <MyCarousel />
+      <MyDrawer />
+      <MyCard />
       <main className="min-h-screen max-w-[1000px] mt-24 mx-auto">
         <h2 className="font-Comfortaa my-4 font-bold text-xl">Photo Gallery</h2>
         <div className="flex flex-wrap content-start">
