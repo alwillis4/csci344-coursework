@@ -9,6 +9,7 @@ export default function App() {
   return (
     <>
       <NavBar />
+      <MyDrawer />
       <MyCarousel />
       <MyDrawer />
       <MyCard />

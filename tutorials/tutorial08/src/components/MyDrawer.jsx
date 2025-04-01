@@ -15,7 +15,7 @@ const MyDrawer = () => {
   return (
     <>
       <Button type="primary" onClick={showDrawer}>
-        Open Drawer
+        Open Table of Contents
       </Button>
       <Drawer
         title="Basic Drawer"
@@ -23,9 +23,11 @@ const MyDrawer = () => {
         onClose={onClose}
         open={open}
       >
-        <p>Some contents...</p>
-        <p>More details here...</p>
-        <p>Additional information...</p>
+        <p>Here's what is on my webpage!</p>
+        <p>A carousel with uniqe pictures.</p>
+        <p>Of couse this Drawer</p>
+        <p>Traffic Light Car</p>
+        <p>Lastly theres the Photo Gallery</p>
       </Drawer>
     </>
   );

@@ -45,6 +45,13 @@ const MyCarousel = () => {
           style={{ width: "100%", height: "auto" }}
         />
       </div>
+      <div>
+        <img
+          src="https://picsum.photos/600/600?id=15"
+          alt="Slide 5"
+          style={{ width: "100%", height: "auto" }}
+        />
+      </div>
     </Carousel>
   );
 };
