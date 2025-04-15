@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Top Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    {% include 'includes/header.html' %}
+
+    <main>
+        <h2>Top Restaurant:</h2>
+        
+        {% if restaurant %}
+        <div class="restaurant-container">
+            <div class="restaurant-image">
+                <img src="{{ restaurant.get('image_url') }}" alt="Restaurant Image" />
+            </div>
+            <div class="restaurant-details">
+                <h3>{{ restaurant.get('name') }}</h3>
+                
+                {% if restaurant.get('display_address') %}
+                    <p><strong>Address:</strong> {{ restaurant.get('display_address') }}</p>
+                {% else %}
+                    <p><strong>Address:</strong> Not available</p>
+                {% endif %}
+                
+                <p><strong>Rating:</strong> {{ restaurant.get('rating') }} / 5</p>
+                
+                <div class="restaurant-phone">
+                    <p><strong>Phone:</strong> {{ restaurant.get('phone') }}</p>
+                </div>
+                
+                <div class="restaurant-price">
+                    <p><strong>Price Range:</strong> {{ restaurant.get('price') }}</p>
+                </div>
+
+                <div class="restaurant-link">
+                    <a href="{{ restaurant.get('url') }}" target="_blank">Visit on Yelp</a>
+                </div>
+            </div>
+        </div>
+        {% else %}
+            <p>No restaurant found based on your search criteria.</p>
+        {% endif %}
+
+        <p><strong>Search location:</strong> {{ location }}</p>
+        <p><strong>Search term:</strong> {{ search_term or 'None Specified' }}</p>
+    </main>
+</body>
+
+</html>
