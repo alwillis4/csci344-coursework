@@ -1,0 +1,13 @@
+Please answer the following two questions:
+
+1. What is a join (just in your own words) and why is it useful?
+Join is a way to tie data from two different databases together usally based on shared data this useful in that 
+it can allow a user to bring together data from different area in an orgaized matter that keeps a user from
+having to copy data between tables leading ton confusion. 
+
+
+
+2. Consider the structure of the posts table: why would you want to use a foreign key (user_id) 
+to the users table instead of storing the username, first_name, and last_name in the posts table?
+It help avoid redunency in the table makeing it more efficent than storing 3 other variables in place of 
+user_id. It also allow for a simplified sturcture for the table.
